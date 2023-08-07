@@ -5,7 +5,7 @@
 
   <%= form_with url: tweets_path, method: :get do |form|%>
     <div class="form-group d-flex mt-3 ml-3 search-form "> <!-- Agregamos la clase "ml-3" para agregar un margen izquierdo -->
-      <%= form.submit "Search", class: "btn btn-outline-primary me-2" %>
+      <%= form.submit "Buscar", class: "btn btn-outline-primary me-2" %>
       <%= form.text_field :query_text, class: "form-control custom-smaller-input", value: params[:query_text] %>
     </div>
   <% end %>
@@ -34,11 +34,11 @@
   </div>
 </div>
 
-
-
 <div class="pagination justify-content-center">
-  <%=raw pagy_nav(@pagy)%>
+  <%=raw pagy_nav(@pagy, link_extra: 'class="btn btn-outline-primary"', link_current: 'class="btn btn-primary active"') %>
 </div>
+
+
 
 
 
