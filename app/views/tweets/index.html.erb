@@ -2,7 +2,7 @@
 
 <h1>Tweets</h1>
 
-<%= link_to "New tweet", new_tweet_path %>
+<%= link_to "Crear Tweet", new_tweet_path, class: "btn btn-outline-info"%>
 
 <div id="tweets" class="centered-card">
   <div class="col-md-6">
@@ -11,11 +11,15 @@
         <div class="card-body">
           <h5 class="card-title"><%= tweet.userName %></h5>
           <p class="card-text"><%= tweet.description %></p>
-          <%= link_to "Show this tweet", tweet, class: "btn btn-primary" %>
+          <%= link_to "Ver Tweet", tweet, class: "btn btn-outline-secondary" %>
         </div>
       </div>
     <% end %>
   </div>
+</div>
+
+<div class="pagination justify-content-center">
+  <%=raw pagy_nav(@pagy)%>
 </div>
 
 

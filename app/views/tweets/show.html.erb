@@ -1,10 +1,25 @@
+<!-- app/views/tweets/show.html.erb -->
 <p style="color: green"><%= notice %></p>
 
-<%= render @tweet %>
+<h1>Tweet</h1>
+<h5 class="card-title"><%= @tweet.userName %></h5>
 
-<div>
-  <%= link_to "Edit this tweet", edit_tweet_path(@tweet) %> |
-  <%= link_to "Back to tweets", tweets_path %>
-
-  <%= button_to "Destroy this tweet", @tweet, method: :delete %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title"><%= @tweet.userName %></h5>
+          <p class="card-text"><%= @tweet.description %></p>
+          <%= link_to "Editar", edit_tweet_path(@tweet), class: "btn btn-outline-success" %>
+          <%= link_to "Volver", tweets_path, class: "btn btn-outline-warning" %>
+          <%= button_to "Eliminar", @tweet, method: :delete, class: "btn btn-outline-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
