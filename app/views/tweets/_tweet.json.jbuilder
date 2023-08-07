@@ -1,2 +1,2 @@
-json.extract! tweet, :id, :userNmae, :descriptio, :created_at, :updated_at
+json.extract! tweet, :id, :userName, :description, :created_at, :updated_at
 json.url tweet_url(tweet, format: :json)

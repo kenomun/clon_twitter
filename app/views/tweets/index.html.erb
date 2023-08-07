@@ -2,13 +2,21 @@
 
 <h1>Tweets</h1>
 
-<div id="tweets">
-  <% @tweets.each do |tweet| %>
-    <%= render tweet %>
-    <p>
-      <%= link_to "Show this tweet", tweet %>
-    </p>
-  <% end %>
+<%= link_to "New tweet", new_tweet_path %>
+
+<div id="tweets" class="centered-card">
+  <div class="col-md-6">
+    <% @tweets.each do |tweet| %>
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title"><%= tweet.userName %></h5>
+          <p class="card-text"><%= tweet.description %></p>
+          <%= link_to "Show this tweet", tweet, class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<%= link_to "New tweet", new_tweet_path %>
+
+
