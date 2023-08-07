@@ -3,7 +3,11 @@ class TweetsController < ApplicationController
 
   # GET /tweets or /tweets.json
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.order(created_at: :desc)
+
+    if params[:query_text].present?
+      @tweets = @tweets.search_full_text(params[:query_text])
+    end
 
     @pagy, @tweets = pagy(@tweets, items: 10)
   end
@@ -67,6 +71,6 @@ class TweetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tweet_params
-      params.require(:tweet).permit(:userNmae, :descriptio)
+      params.require(:tweet).permit(:userName, :description)
     end
 end

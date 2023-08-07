@@ -17,6 +17,9 @@ class Tweet < ApplicationRecord
   pg_search_scope :search_full_text,
   against: {
     userName: 'A',
-    descripction: 'B',
+    description: 'B',
+  },
+  using: {
+    tsearch: { prefix: true }
   }
 end

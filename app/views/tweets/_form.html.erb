@@ -11,17 +11,24 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :userName, style: "display: block" %>
-    <%= form.text_field :userName %>
+  <div id="tweets" class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="margin-top">
+            <%= form.label :userName, style: "display: block" %>
+            <%= form.text_field :userName, class: "form-control", readonly: !@tweet.new_record? %>
+          </div>
+          <div class="margin-top">
+            <%= form.label :Publicacion, style: "display: block" %>
+            <%= form.text_field :description, class: "form-control"%>
+          </div>
+          <div class="d-flex justify-content-end">
+            <%= form.submit "Publicar", class: "btn btn-outline-success buttons-index-show" %>
+          </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

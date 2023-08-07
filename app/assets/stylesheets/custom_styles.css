@@ -1,0 +1,58 @@
+body {
+  background-color: #333; /* Cambia el color aquí a tu preferencia */
+  color: #fff; /* Color de texto para asegurar la legibilidad en el fondo oscuro */
+}
+
+.card {
+  background-color: #333; /* Mismo color que el fondo de la aplicación */
+  color: #479db3;
+  border: 1px solid #5083b3; /* Color de texto para asegurar la legibilidad en el fondo oscuro */
+}  
+
+.search-form {
+	margin-right: 200px;
+}
+
+.tittle {
+  margin-left: 200px;
+}
+
+.content {
+	margin: 20px;
+	padding: 10px;
+}
+
+.custom-smaller-input {
+width: 300px !important; /
+}
+
+.centered-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.buttons-index-show {
+	margin-top: 50px;
+}
+
+.buttons-show {
+	margin-top: 80px;
+}
+
+.buttons-create {
+	margin-top: 80px;
+}
+
+.button-show {
+	margin-right: 5px;
+}
+
+.margin-top {
+	margin-top: 10px;
+}
+
+.button-back {
+  margin-left: 200px;
+}

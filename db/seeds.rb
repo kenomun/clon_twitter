@@ -6,21 +6,20 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-def random_sentence(min_words, max_words)
-  number_of_words = rand(min_words..max_words)
-  sentence = Faker::Lorem.words(number: number_of_words).join(' ').capitalize
-  sentence << '.' unless sentence.end_with?('.', '!', '?')
-  sentence
-end
+# def random_sentence(min_words, max_words)
+#   number_of_words = rand(min_words..max_words)
+#   sentence = Faker::Lorem.words(number: number_of_words).join(' ').capitalize
+#   sentence << '.' unless sentence.end_with?('.', '!', '?')
+#   sentence
+# end
 
 puts 'agregar 50 usuarios de prueba'
 tweet_created  = 0
 
-MAX_DESCRIPTION_LENGTH = 280
 50.times do |i|
 	tweet  = Tweet.create(
-		userName: Faker::Internet.unique.user_name,
-    description: random_sentence(50, 240),
+		userName: Faker::Twitter.user[:name],
+    description: Faker::Twitter.user[:description],
 	)
 	tweet_created += 1 if tweet.persisted?
 end
