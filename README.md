@@ -42,6 +42,3 @@ Esta es una aplicación que simula el comportamiento básico de Twitter, permiti
 
 6. Abre tu navegador y visita http://localhost:3000 para ver la aplicación en acción.
 
-## Créditos
-
-Este proyecto fue desarrollado como parte de <Ruby on Rail> en <Inforcap>.
