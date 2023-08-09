@@ -2,6 +2,9 @@
 
 Esta es una aplicación que simula el comportamiento básico de Twitter, permitiendo a los usuarios crear, leer, actualizar y eliminar tweets. Los tweets están relacionados con usuarios, y puedes realizar acciones comunes en ellos.
 
+## Demo
+
+Puedes acceder a una demostración en vivo de la aplicación desplegada en Heroku en el siguiente enlace: [Enlace a la demo](https://fierce-lowlands-97033-a06feb40d4ab.herokuapp.com/)
 ## Requisitos
 
 - Ruby version: 3.1.2
